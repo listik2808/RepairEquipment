@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Scripts.Hero
 {
-[RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(CharacterController))]
     public class HeroMove : MonoBehaviour
     {
         [SerializeField] private CharacterController _characterController;

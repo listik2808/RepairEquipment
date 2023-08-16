@@ -1,10 +1,13 @@
+using Scripts.Hero;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Scripts.Employer
 {
     public interface IWork
     {
-        void OfferJob();
-        bool IsActiveWork { get; set; }
+        void WorkActivate();
+        void Show();
+        void JobDescriptions(Player player);
     }
 }

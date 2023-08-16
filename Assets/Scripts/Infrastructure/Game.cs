@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Scripts.Infrastructure
 {
-    public class Game : MonoBehaviour
+    public class Game
     {
         public static IInputService InputService;
 

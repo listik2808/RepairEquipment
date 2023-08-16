@@ -1,13 +1,21 @@
-﻿using UnityEngine;
+﻿using Scripts.Hero;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Scripts.Employer
 {
-    public abstract class Work : IWork
+    public abstract class Work :MonoBehaviour, IWork
     {
-        [SerializeField] protected Transform _target;
+        [SerializeField] protected List<GameObject> _points = new List<GameObject>();
 
-        public bool IsActiveWork { get => IsActiveWork; set => IsActiveWork = value; }
+        protected bool _isActiveWork;
 
-        public abstract void OfferJob();
+        public List<GameObject> Points => _points;
+
+        public abstract void WorkActivate();
+
+        public abstract void JobDescriptions(Player player);
+
+        public abstract void Show();
     }
 }
